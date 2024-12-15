@@ -1,0 +1,28 @@
+---
+import TableOfContents from '../components/TableOfContents.astro';
+import ProjectJournal from '../components/ProjectJournal.astro';
+import JournalSummary from '../components/JournalSummary.astro';
+import JournalEntry from '../components/JournalEntry.astro';
+import RightColumn from '../components/RightColumn.astro';
+
+---
+
+<main>
+    <TableOfContents/>
+    <ProjectJournal>
+        <JournalSummary/>
+        <JournalEntry/>
+    </ProjectJournal>
+    <RightColumn/>
+
+</main>
+
+<style>
+    main {
+        display: grid;
+        grid-template-columns: 17.5fr 65fr 17.5fr;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>

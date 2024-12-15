@@ -1,0 +1,31 @@
+---
+import JournalSummary from '../components/JournalSummary.astro';
+import JournalEntry from '../components/JournalEntry.astro';
+---
+<div class="project-journal-layout">
+    <div class="project-journal-timeline-bar"></div>
+    <div class="project-journal">
+        <JournalSummary />
+        <JournalEntry />
+        <JournalEntry />
+        <JournalEntry />
+        <JournalEntry />
+        <JournalEntry />
+        <JournalEntry />
+
+    </div>
+</div>
+
+<style>
+    .project-journal-layout {
+        display: grid;
+        grid-template-columns: 4px 1fr;
+    }
+
+    .project-journal-timeline-bar {
+        margin-top: 56px;
+        background-color: black;
+        width: 4px;
+        height: (100%-56px);
+    }
+</style>
