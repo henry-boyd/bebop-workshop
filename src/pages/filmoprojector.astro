@@ -1,0 +1,21 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import ProjectPageLayout from '../layouts/ProjectPageLayout.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import type { CollectionKey } from 'astro:content';
+
+interface Props {
+    projectName: CollectionKey;
+    projectTitle: string;
+}
+
+const projectName = 'filmo'
+const projectTitle = "Bell & Howell Filmo S 16mm Projector Rebuild"
+const collectionName = await getCollection('filmo', ({ data }) => {
+  return data.draft == true;
+});
+
+---
+
+<ProjectPageLayout projectName={projectName} projectTitle ={projectTitle}>
+</ProjectPageLayout>

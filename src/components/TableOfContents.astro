@@ -1,15 +1,23 @@
 ---
+import type { CollectionKey } from 'astro:content';
+import { getCollection, getEntry, render  } from 'astro:content';
+
+interface Props {
+    projectName: CollectionKey;
+}
+
+const { projectName } = Astro.props;
+const projectCollection = await getCollection(projectName, ({ data }) => {
+  return data.draft == true;
+}) ;
 
 ---
+
 <div class="table-of-contents">
         <ul class="table-of-contents-box">
-            <li>Top</li>
-            <li>Summary</li>
-            <li>Inception</li>
-            <li>Research</li>
-            <li>Entry (I did X)</li>
-            <li>Entry (I did Y)</li>
-            <li>Conclusion</li>
+            {projectCollection.map(post => (
+              <li>{post.data.title}</li>
+            ))}
         </ul>
 </div>
 
@@ -26,6 +34,8 @@
     .table-of-contents-box {
         list-style-type: none;
         display: flex;
+        max-width: 16ch;
+        position: fixed;
         padding: 15px 28px;
         flex-direction: column;
         text-align: right;
@@ -33,6 +43,14 @@
     }
 
     li {
+        text-decoration: none;
+        text-color: black;
         margin: .25rem 0;
+    }
+
+    @media(max-width: 1200px) {
+        .table-of-contents {
+        display: none;
+    }
     }
 </style>

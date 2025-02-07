@@ -1,14 +1,91 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import HomepageLayout from '../layouts/HomepageLayout.astro';
 import HomepageHeader from '../components/HomepageHeader.astro';
-import Layout from '../layouts/Layout.astro';
-const title = 'Bebop Workshop'
+import ProjectBoxImage from '../components/ProjectBoxImage.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+interface Props {
+    positionX: number;
+    positionY: number;
+}
+
+const title = 'Bebop Workshop'
+const positionX1 = 40;
+const positionY1 = 0;
+const positionX2 = 10;
+const positionY2 = 15;
+const positionX3 = 25;
+const positionY3 = 0;
+const positionX4 = 5;
+const positionY4 = 15;
+
 ---
 
-<Layout>
+<HomepageLayout>
 	<HomepageHeader />
-	<Welcome />
-</Layout>
+	<main class="homepage-body">
+		<div class="homepage-projects-grid">
+					<ProjectBoxImage positionX = {positionX1} positionY = {positionY1} />
+					<ProjectBoxImage positionX = {positionX2} positionY = {positionY2} />
+					<ProjectBoxImage positionX = {positionX3} positionY = {positionY3} />
+					<ProjectBoxImage positionX = {positionX4} positionY = {positionY4} />
+		</div>
+	</main>
+</HomepageLayout>
+
+<style>
+	.homepage-body {
+		position: relative;
+	}
+
+	.homepage-projects-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+		grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+	}
+	
+	.line-1 {
+		display: none;
+		background-color: black;
+		position: fixed;
+		top: 280px;
+		left: 537.5px;
+		width: 3px;
+		height: 30px;
+	}
+	.line-2 {
+		display: none;
+		background-color: black;
+		position: fixed;
+		top: 310px;
+		left: 355px;
+		width: 185px;
+		height: 3px;
+	}
+
+    @media(max-width: 1200px) {
+		.homepage-body {
+			max-width: 1000px;
+			margin-left: auto;
+            margin-right: auto;
+		}
+		.homepage-projects-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-items: center;
+		}
+
+    }
+
+	@media(max-width: 650px) {
+		.homepage-body {
+			margin: 0;
+		}
+
+		.homepage-projects-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		}
+
+    }
+</style>

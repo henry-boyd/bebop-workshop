@@ -1,5 +1,143 @@
-<header>
-<br>
-<h1>Bebop Workshop</h1>
-<br>
+---
+---
+
+<header class="homepage-header">
+    
+    <div class="lightbulb-with-title">
+        <div class="lightbulb-box">
+            <img class="lightbulb-off-image" src="src/assets/MockLightbulbOff.svg" style="height: 356px; width: 256px;">
+        </div>
+
+        <div class="title-with-tiny-lightbulb">
+            <a href="index.html">
+                <h1 class="homepage-title">Bebop <br> Workshop</h1>
+            </a>
+            <img class="tiny-lightbulb" src="src/assets/MockLightbulbOff.svg" style="height: 150px; width: 110px;">
+        </div>
+    </div>
+
+    <div class="menu-with-line">
+        <div class="homepage-header-line-box">
+            <div class="homepage-header-line"></div>
+        </div>
+    
+        <div class="homepage-menu-box">
+            <nav class="homepage-menu">
+                <a href="/about">About</a></a>
+                <a href="https://instagram.com/bebopworkshop"><img src="src/assets/Insta Icon 1.svg"></a>
+                <a href="https://tiktok.com/bebopworkshop"><img src="src/assets/TikTok Icon 1.svg"></a>
+            </nav>
+        </div>
+    </div>
+
+
 </header>
+
+<style>
+    .homepage-header {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0rem 3rem;
+        z-index: 1;
+    }
+
+    .lightbulb-with-title {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .lightbulb-box {
+        max-width: 225px;
+        max-height: 200px;
+    }
+
+    .lightbulb-off-image {
+
+    }
+
+    .title-with-tiny-lightbulb {
+        position: relative;
+    }
+
+    .tiny-lightbulb {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .homepage-title {
+        margin: 0;
+        font-size: 5rem;
+    }
+
+    .menu-with-line {
+        display: flex;
+    }
+
+
+    .homepage-header-line-box {
+        width: 11vw;
+    }
+
+    .homepage-header-line {
+        margin-top: 145px;
+        border-top: 2px solid black;
+    }
+
+    .homepage-menu {
+        margin-top: 80px; 
+        display: flex;
+        max-width: 200px;
+        padding: 28px 20px;
+        gap: 16px;
+        align-items: center;
+        border: 2px solid #000;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.375rem;
+    }
+
+    @media (max-width: 1200px) {
+        .homepage-header {
+            display: grid;
+            padding: 0 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .homepage-header-line {
+            border-top: white;
+        }
+        .homepage-header-line-box {
+            width: 225px;
+        }
+
+        .homepage-menu {
+           margin: 1rem 0;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .homepage-header {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 0 0;
+        }
+
+        .lightbulb-box {
+            display: none;
+        }
+
+        .tiny-lightbulb {
+        display: block;
+        }
+
+        .homepage-header-line-box {
+            display: none;
+        }
+    }
+</style>

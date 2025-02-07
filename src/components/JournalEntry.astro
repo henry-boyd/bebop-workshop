@@ -1,10 +1,29 @@
 ---
+import type { CollectionKey } from 'astro:content';
+import { getEntry, render } from 'astro:content';
 
+interface Props {
+    projectName: CollectionKey;
+    entryID: string;
+    entryTitle: string;
+}
+
+const { projectName, entryID, entryTitle } = Astro.props;
+
+const entry = await getEntry(projectName, entryID) ;
+if (!entry) {
+  // Handle Error, for example:
+  throw new Error('Could not find blog post');
+}
+const { Content } = await render(entry);
 ---
 
 <div class="journal-entry">
     <div class="title-dashed-line"></div>
-    <h1>2024.11.23 Research</h1>
+    <h1>{entryTitle}</h1>
+    <div class="journal-entry-content">
+          <Content />
+    </div>
 </div>
 
 <style>
@@ -18,7 +37,7 @@
         position: absolute;
         top: 76px;
         border-top: 4px dashed black;   
-        width: 30px;
+        width: 35px;
         height: 4px;
    }
 

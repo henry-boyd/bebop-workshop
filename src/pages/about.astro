@@ -1,19 +1,41 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import HomepageHeader from '../components/HomepageHeader.astro';
-import Layout from '../layouts/Layout.astro';
+import HomepageLayout from '../layouts/HomepageLayout.astro';
 const title = 'Bebop Workshop'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
+<HomepageLayout>
+	<HomepageHeader/>
+	<main class="homepage-body">
+		<h2>Welcome stranger!</h2>
+	
+		<p>My name's <a href="https://www.henry-boyd.com/">Henry</a>, I built this website as a home for the various devices, doohickeys, and thingamabobs I have been/will be tinkering with over the years. I like taking things apart to see what makes them tick and playing around with fun or useful gadgets, not to mention letting my imagination run wild when it comes to ideas about what technology the future might hold. So suffice to say the projects you'll see here will be some combination of physical designs, software, and restoration work.</p>
+	
+		<p>Part of life is about finding your rhythm. Bebop is about tempo, change, and improvisation. Or at least that's the plan? Don't hesitate to reach out if you want to talk shop or anything!  <a href="https://www.youtube.com/watch?v=YA4P1A3jtu0">I'll play myself out</a></p>
 
-<body>
-	<h1>My Astro Site</h1>
-	<h1>About Me</h1>
-	<h2>... and my new Astro site!</h2>
-  
-	<p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-  
-	<p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-  </body>
+		<a href="mailto:henry@bebopworkshop.com"><p>henry@bebopworkshop.com</p></a>
+	</main>
+</HomepageLayout>
+
+<style>
+	.homepage-body {
+		display: grid;
+		margin-top: 4rem;
+		padding: 1rem;
+		position: relative;
+		max-width: 70ch;
+		margin-left: auto;
+		margin-right: auto;
+		border: 2px solid black
+	}
+
+	@media (max-width: 650px) {
+		.homepage-body {
+			margin-top: 2rem;
+			margin-left: 2rem;
+			margin-right: 2rem;
+		}
+	}
+</style>

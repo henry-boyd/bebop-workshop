@@ -1,0 +1,15 @@
+---
+import ProjectJournalHeader from "../components/ProjectJournalHeader.astro";
+import ProjectJournalBody from "../components/ProjectJournalBody.astro";
+import type { CollectionKey } from 'astro:content';
+
+interface Props {
+    projectName: CollectionKey;
+    projectTitle: string;
+}
+
+const { projectName, projectTitle } = Astro.props;
+---
+
+<ProjectJournalHeader></ProjectJournalHeader>
+<ProjectJournalBody projectName={projectName} projectTitle ={projectTitle}></ProjectJournalBody>

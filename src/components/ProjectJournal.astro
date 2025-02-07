@@ -1,18 +1,28 @@
 ---
 import JournalSummary from '../components/JournalSummary.astro';
 import JournalEntry from '../components/JournalEntry.astro';
+import type { CollectionKey } from 'astro:content';
+import { getCollection } from 'astro:content';
+
+interface Props {
+    projectName: CollectionKey;
+    projectTitle: string;
+}
+
+const { projectName, projectTitle } = Astro.props;
+
+const collectionName = await getCollection(projectName, ({ data }) => {
+  return data.draft == true;
+});
+
 ---
 <div class="project-journal-layout">
     <div class="project-journal-timeline-bar"></div>
     <div class="project-journal">
-        <JournalSummary />
-        <JournalEntry />
-        <JournalEntry />
-        <JournalEntry />
-        <JournalEntry />
-        <JournalEntry />
-        <JournalEntry />
-
+        <JournalSummary projectTitle ={projectTitle}/>
+        {collectionName.map(post => (
+            <JournalEntry projectName={projectName} entryID={post.id} entryTitle={post.data.title} />
+          ))}
     </div>
 </div>
 
@@ -27,5 +37,6 @@ import JournalEntry from '../components/JournalEntry.astro';
         background-color: black;
         width: 4px;
         height: (100%-56px);
+        z-index: 1;
     }
 </style>

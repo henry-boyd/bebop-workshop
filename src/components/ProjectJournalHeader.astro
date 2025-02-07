@@ -3,19 +3,22 @@
 ---
 
 <header>
-    <div class="header-logo"><img src="/src/assets/astro.svg"></div>
+    <a href="/"><h1 class="header-logo" style="text-decoration: none; color: black;">Bebop<br>Workshop</h1></a>
     <nav class="journal-header-menu">
         <a href="/">Home</a></a>
         <a href="/about">About</a></a>
-        <a href="https://instagram.com/bebopworkshop"><img src="src/assets/Insta Icon 1.svg"></a>
-        <a href="https://instagram.com/bebopworkshop"><img src="src/assets/TikTok Icon 1.svg"></a>
+        <a href="https://instagram.com/bebopworkshop"><img src="/src/assets/Insta Icon 1.svg"></a>
+        <a href="https://tiktok.com/bebopworkshop"><img src="/src/assets/TikTok Icon 1.svg"></a>
     </nav>
 </header>
 
 <style>
     header { 
         display: flex;
-        padding: 0px 225px;
+        max-width: 50rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 3rem;
         justify-content: space-between;
         align-items: center;
         border: 1px solid #000;
@@ -30,9 +33,16 @@
     }
 
     .journal-header-menu {
+        border: 1px solid #000;
         display: flex;
         padding: 36px 20px;
         align-items: center;
         gap: 16px;
+    }
+
+    @media(max-width: 500px) {
+        header {
+            padding: 0 1rem;
+        }
     }
 </style>

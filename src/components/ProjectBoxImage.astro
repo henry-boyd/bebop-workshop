@@ -1,0 +1,45 @@
+---
+interface Props {
+    positionX: number;
+    positionY: number;
+}
+
+const { positionX, positionY } = Astro.props
+
+const positionXstr = positionX + "%";
+const positionYstr = positionY + "%";
+
+---
+
+<div class="project-box-image">
+    <img class="bg-white" src="src/assets/SolidWhite.png"/>
+    <img class ="project-image" src="src/assets/testfeaturedimage.jpg" style="max-width: 320px;"><img>
+</div>
+
+<style define:vars={{ positionXstr, positionYstr }}>
+    .project-box-image {
+        position: relative;
+        max-height: 300px;
+        overflow: hidden;
+    }
+
+    .bg-white {
+        height: 100%;
+        width: 100%;
+    }
+
+    .project-image {
+        position: absolute;
+        left: var(--positionXstr);
+        top: var(--positionYstr);
+        border: 2px solid black;
+        z-index: 2;
+    }
+
+    @media (max-width: 650px) {
+        .project-image {
+        left: var(--positionXstr);
+        top: 0;
+    }
+    }
+</style>
