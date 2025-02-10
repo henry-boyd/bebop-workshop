@@ -3,7 +3,6 @@ import TableOfContents from '../components/TableOfContents.astro';
 import ProjectJournal from '../components/ProjectJournal.astro';
 import JournalSummary from '../components/JournalSummary.astro';
 import JournalEntry from '../components/JournalEntry.astro';
-import RightColumn from '../components/RightColumn.astro';
 import type { CollectionKey } from 'astro:content';
 
 interface Props {
@@ -18,7 +17,7 @@ const { projectName, projectTitle } = Astro.props;
     <TableOfContents projectName={projectName}/>
     <ProjectJournal projectName={projectName} projectTitle ={projectTitle} >
     </ProjectJournal>
-    <RightColumn/>
+    <div class="right-column"></div>
 
 </main>
 
@@ -36,6 +35,9 @@ const { projectName, projectTitle } = Astro.props;
             grid-template-columns: 1fr;
             max-width: 47.5rem;
 
+        }
+        .right-column {
+        display: none;
         }
     }
 </style>

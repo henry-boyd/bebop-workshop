@@ -3,20 +3,31 @@ import HomepageLayout from '../layouts/HomepageLayout.astro';
 import HomepageHeader from '../components/HomepageHeader.astro';
 import ProjectBoxImage from '../components/ProjectBoxImage.astro';
 
+
 interface Props {
     positionX: number;
     positionY: number;
+	projectTitle: string;
+	projectURL: string;
 }
 
 const title = 'Bebop Workshop'
-const positionX1 = 40;
+const positionX1 = 60;
 const positionY1 = 0;
-const positionX2 = 10;
-const positionY2 = 15;
-const positionX3 = 25;
+const positionX2 = 25;
+const positionY2 = 10;
+const positionX3 = 35;
 const positionY3 = 0;
 const positionX4 = 5;
-const positionY4 = 15;
+const positionY4 = 5;
+
+const project1 = "Filmo Projector";
+const project1url = "/filmoprojector";
+const project2 = "Severance Computer";
+const project2url = "/severancecomputer";
+const project3 = "Coming Soon!";
+const project3url = "/comingsoon";
+
 
 ---
 
@@ -24,10 +35,10 @@ const positionY4 = 15;
 	<HomepageHeader />
 	<main class="homepage-body">
 		<div class="homepage-projects-grid">
-					<ProjectBoxImage positionX = {positionX1} positionY = {positionY1} />
-					<ProjectBoxImage positionX = {positionX2} positionY = {positionY2} />
-					<ProjectBoxImage positionX = {positionX3} positionY = {positionY3} />
-					<ProjectBoxImage positionX = {positionX4} positionY = {positionY4} />
+					<ProjectBoxImage positionX = {positionX1} positionY = {positionY1} projectTitle = {project1} projectURL = {project1url} />
+					<ProjectBoxImage positionX = {positionX2} positionY = {positionY2} projectTitle = {project2} projectURL = {project2url} />
+					<ProjectBoxImage positionX = {positionX3} positionY = {positionY3} projectTitle = {project3} projectURL = {project3url} />
+					<ProjectBoxImage positionX = {positionX4} positionY = {positionY4} projectTitle = {project3} projectURL = {project3url} />
 		</div>
 	</main>
 </HomepageLayout>
@@ -39,7 +50,7 @@ const positionY4 = 15;
 
 	.homepage-projects-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+		grid-template-columns: repeat(2, minmax(350px, 1fr));
 		grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
 	}
 	
@@ -65,8 +76,6 @@ const positionY4 = 15;
     @media(max-width: 1200px) {
 		.homepage-body {
 			max-width: 1000px;
-			margin-left: auto;
-            margin-right: auto;
 		}
 		.homepage-projects-grid {
 		display: grid;

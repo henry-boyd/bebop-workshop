@@ -1,5 +1,6 @@
 ---
 import ProjectJournalHeader from "../components/ProjectJournalHeader.astro";
+import TableOfContentsDropdown from '../components/TableOfContentsDropdown.astro';
 import ProjectJournalBody from "../components/ProjectJournalBody.astro";
 import type { CollectionKey } from 'astro:content';
 
@@ -12,4 +13,5 @@ const { projectName, projectTitle } = Astro.props;
 ---
 
 <ProjectJournalHeader></ProjectJournalHeader>
+<TableOfContentsDropdown projectName={projectName}/>
 <ProjectJournalBody projectName={projectName} projectTitle ={projectTitle}></ProjectJournalBody>

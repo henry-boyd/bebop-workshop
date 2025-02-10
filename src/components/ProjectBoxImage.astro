@@ -2,38 +2,74 @@
 interface Props {
     positionX: number;
     positionY: number;
+    projectTitle: string;
+    projectURL: string;
 }
 
-const { positionX, positionY } = Astro.props
+const { positionX, positionY, projectTitle, projectURL } = Astro.props
 
 const positionXstr = positionX + "%";
 const positionYstr = positionY + "%";
 
----
+const projectIcon = "src/assets" + projectURL + "icon.svg";
 
-<div class="project-box-image">
-    <img class="bg-white" src="src/assets/SolidWhite.png"/>
-    <img class ="project-image" src="src/assets/testfeaturedimage.jpg" style="max-width: 320px;"><img>
+---
+<div class="project-area">
+        <div class="image-box">
+            <a href={projectURL} style="color: black">
+            <img class="project-image" src={projectIcon}>
+                <h2 class="image-title">{projectTitle}</h2>
+            </a>
+        </div>
 </div>
 
 <style define:vars={{ positionXstr, positionYstr }}>
-    .project-box-image {
-        position: relative;
-        max-height: 300px;
-        overflow: hidden;
+    
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .project-area {
+        z-index: 1;
     }
 
-    .bg-white {
-        height: 100%;
-        width: 100%;
+    .image-box {
+        margin-left: var(--positionXstr);
+        margin-top: var(--positionYstr);
+        display: grid;
+        width: fit-content;
+        height: fit-content;
+        justify-content: center;
+        border: 2px solid black;
+        z-index: 2;
+    }
+
+    .image-box:hover {
+        .image-title {
+            opacity: 1;
+        }
     }
 
     .project-image {
-        position: absolute;
-        left: var(--positionXstr);
-        top: var(--positionYstr);
-        border: 2px solid black;
+        padding: 40px 60px 0px 60px;
         z-index: 2;
+        min-height: 140px;
+        min-width: 110px;
+        color: black;
+    }
+
+    .image-title {
+        text-align: center;
+        opacity: 0;
+        transition: 1s;
+        padding: 0 2rem;
+    }
+
+    @media(max-width: 1200px) {
+        .image-title {
+            opacity: 1;
+        }
     }
 
     @media (max-width: 650px) {
