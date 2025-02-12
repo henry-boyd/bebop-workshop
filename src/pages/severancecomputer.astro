@@ -1,0 +1,21 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import ProjectPageLayout from '../layouts/ProjectPageLayout.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import type { CollectionKey } from 'astro:content';
+
+interface Props {
+    projectName: CollectionKey;
+    projectTitle: string;
+}
+
+const projectName = 'severancecomputer'
+const projectTitle = "Severance Computer"
+const collectionName = await getCollection('severancecomputer', ({ data }) => {
+  return data.draft == true;
+});
+
+---
+
+<ProjectPageLayout projectName={projectName} projectTitle ={projectTitle}>
+</ProjectPageLayout>

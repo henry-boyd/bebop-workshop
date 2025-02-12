@@ -21,7 +21,7 @@ const filmo = defineCollection({
     })
 });
 
-const severance = defineCollection({
+const severancecomputer = defineCollection({
     loader: glob({ pattern: '**/[^_]*.md', base: "./src/projects/SeveranceComputer" }),
     schema: z.object({
       title: z.string(),
@@ -38,4 +38,4 @@ const severance = defineCollection({
 });
 
 // Export a single `collections` object to register your collection(s)
-export const collections = { filmo, severance };
+export const collections = { filmo, severancecomputer };
