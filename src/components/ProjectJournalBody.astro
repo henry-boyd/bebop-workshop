@@ -14,15 +14,21 @@ const { projectName, projectTitle } = Astro.props;
 ---
 
 <main>
-    <TableOfContents projectName={projectName}/>
-    <ProjectJournal projectName={projectName} projectTitle ={projectTitle} >
-    </ProjectJournal>
-    <div class="right-column"></div>
-
+    <div class="journal-hero"></div>
+    <div class="journal-body">
+        <TableOfContents projectName={projectName}/>
+        <ProjectJournal projectName={projectName} projectTitle ={projectTitle} >
+        </ProjectJournal>
+        <div class="right-column"></div>
+    </div>
 </main>
 
 <style>
-    main {
+    .journal-hero {
+        padding-top: 4rem;
+    }
+
+    .journal-body {
         display: grid;
         grid-template-columns: 17.5fr 65fr 17.5fr;
         max-width: 80rem;
@@ -31,7 +37,7 @@ const { projectName, projectTitle } = Astro.props;
     }
 
     @media(max-width: 1200px) {
-        main {
+        .journal-body {
             grid-template-columns: 1fr;
             max-width: 47.5rem;
 

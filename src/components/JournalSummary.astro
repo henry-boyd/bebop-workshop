@@ -7,41 +7,63 @@ interface Props {
 
 const { projectTitle } = Astro.props;
 
+const image = projectTitle;
+const featuredImage = "/src/assets/ProjectImages/" + image + "/featuredimage.jpg";
+
 ---
+
 <div class="journal-summary">
-    <div class="title-dashed-line"></div>
+    <div class="title-section">
+        <div class="title-dashed-line"></div>
+        <h1 class="project-title">{projectTitle}</h1>
+    </div>
 
-    <h1>{projectTitle}</h1>
-
-    <div class="journal-featured-image" style="border: 1px solid grey;">
-        <img src="/src/assets/testfeaturedimage.jpg">
+    <div class="journal-featured-image">
+        <img src={featuredImage}>
     </div>
 </div>
 
 <style>
+   
+    .project-title {
+    padding: 2% 0 2rem 10px;
+    max-width: 24ch;
+    }
+
+    img {
+        width: 100%;
+        max-height: 500px;
+    }
+
+  .journal-summary:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    margin-top: 4.5%;
+    border-left: 4px solid black;
+  }
+
    .journal-summary {
     position: relative;
+    }
+
+   .title-section {
+        display: flex;
+        min-height: 80px;
    }
+
    .title-dashed-line {
-        position: absolute; 
-        top: 34.5px;
+        margin-top: 4.5%;
+        margin-left: 4px;
         border-top: 4px dashed black;   
         width: 35px;
         height: 4px;
         z-index: 1;
    }
-   
-   h1 {
-    padding-left: 40px;
-    max-width: 24ch;
-   }
-   
-   img {
-        width: 100%;
-        max-height: 500px;
-    }
 
     .journal-featured-image {
         max-height: 500px;
+        display: flex;
     }
 </style>

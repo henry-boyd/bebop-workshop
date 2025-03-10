@@ -1,0 +1,185 @@
+---
+interface Props {
+    positionX: number;
+    positionY: number;
+    projectTitle: string;
+    projectURL: string;
+}
+
+const { positionX, positionY, projectTitle, projectURL } = Astro.props
+
+const positionXstr = positionX + "%";
+const positionYstr = positionY + "%";
+
+---
+
+<div class="project-area">
+        <div class="image-box">
+            <a href={projectURL}>
+
+                <svg class="filmo-svg" width="149" height="140" viewBox="0 0 149 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Group 3" class="filmo-projector-svg">
+                    <path id="Projector Neck" d="M58.381 137.5H21.2682C21.9411 136.979 22.6622 136.275 23.4043 135.455C24.9865 133.707 26.7125 131.374 28.333 128.996C31.573 124.242 34.4368 119.24 34.9476 118.214C35.034 118.04 35.1226 117.763 35.2129 117.434C35.3069 117.093 35.4133 116.657 35.5297 116.142C35.7625 115.111 36.039 113.746 36.3403 112.15C36.9431 108.957 37.6482 104.828 38.3072 100.574C38.9661 96.3209 39.5796 91.9393 39.9988 88.2432C40.4159 84.5659 40.6471 81.5171 40.5241 79.9606L40.5087 79.7655C40.5065 79.7016 40.5044 79.6155 40.5029 79.5H51.4826C51.4907 95.013 51.8765 105.614 52.5006 118.016C52.7034 122.046 53.9455 125.666 55.2587 128.971C55.5329 129.661 55.8089 130.335 56.0793 130.995C57.0243 133.302 57.8999 135.439 58.381 137.5Z" stroke="black"/>
+
+                    <rect id="Rectangle 1" x="13.5" y="43.5" width="65" height="36" fill="white" stroke="black"/>
+                    <rect id="Rectangle 2" x="0.5" y="19.5" width="37" height="74" rx="4.5" fill="white" stroke="black"/>
+                    <line id="Line 16" y1="-0.5" x2="25.2717" y2="-0.5" transform="matrix(0.713374 0.700783 -0.713374 0.700783 60.2834 80.1462)" stroke="black"/>
+                    <line id="Line 17" y1="-0.5" x2="25.2717" y2="-0.5" transform="matrix(0.713374 0.700783 -0.713374 0.700783 74.306 80.1462)" stroke="black"/>
+                    <path id="Lower Reel Arm" d="M67.3508 86.6437L75.2313 94.2854L78.1336 91.1598L78.1611 91.1301L78.193 91.1053L82.2459 87.9531L78.1464 83.8536L73.7929 79.5H60.2071L67.3508 86.6437Z" fill="white" stroke="black"/>
+                    <g id="Lower Film Reel" class="film-reel">
+                    <circle id="Ellipse 14" cx="91" cy="104" r="18.5" fill="white" stroke="black"/>
+                    <circle id="Ellipse 12" class="inner-reel-circle" cx="91" cy="104" r="3.5" fill="white" stroke="black"/>
+                    <circle id="Ellipse 15" class="inner-reel-circle" cx="102" cy="104" r="5.5" fill="white" stroke="black"/>
+                    <circle id="Ellipse 16" class="inner-reel-circle" cx="91" cy="93" r="5.5" fill="white" stroke="black"/>
+                    <circle id="Ellipse 17" class="inner-reel-circle" cx="80" cy="104" r="5.5" fill="white" stroke="black"/>
+                    <circle id="Ellipse 18" class="inner-reel-circle" cx="91" cy="115" r="5.5" fill="white" stroke="black"/>
+                    </g>
+                    <line id="Line 22" y1="-0.5" x2="25.2717" y2="-0.5" transform="matrix(0.713374 -0.700783 -0.713374 -0.700783 60.2834 42.5778)" stroke="black"/>
+                    <line id="Line 23" y1="-0.5" x2="25.2717" y2="-0.5" transform="matrix(0.713374 -0.700783 -0.713374 -0.700783 74.306 42.5778)" stroke="black"/>
+                    <path id="Upper Reel Arm" d="M67.3508 36.3563L75.2313 28.7146L78.1336 31.8402L78.1611 31.8699L78.193 31.8947L82.2459 35.0469L78.1464 39.1464L73.7929 43.5H60.2071L67.3508 36.3563Z" fill="white" stroke="black"/>
+                    <g id="Upper Film Reel" class="film-reel">
+                    <circle id="Ellipse 19" cx="19" cy="19" r="18.5" transform="matrix(1 0 0 -1 72 38)" fill="white" stroke="black"/>
+                    <circle id="Ellipse 20" class="inner-reel-circle" cx="4" cy="4" r="3.5" transform="matrix(1 0 0 -1 87 23)" fill="white" stroke="black"/>
+                    <circle id="Ellipse 21" class="inner-reel-circle" cx="6" cy="6" r="5.5" transform="matrix(1 0 0 -1 96 25)" fill="white" stroke="black"/>
+                    <circle id="Ellipse 22" class="inner-reel-circle" cx="6" cy="6" r="5.5" transform="matrix(1 0 0 -1 85 36)" fill="white" stroke="black"/>
+                    <circle id="Ellipse 23" class="inner-reel-circle" cx="6" cy="6" r="5.5" transform="matrix(1 0 0 -1 74 25)" fill="white" stroke="black"/>
+                    <circle id="Ellipse 24" class="inner-reel-circle" cx="6" cy="6" r="5.5" transform="matrix(1 0 0 -1 85 14)" fill="white" stroke="black"/>
+                    </g>
+                    <rect id="Rectangle 38" x="79" y="54" width="20" height="16" fill="white"/>
+                    <line id="Line 20" x1="79" y1="70.5" x2="99" y2="70.5" stroke="black"/>
+                    <line id="Line 21" x1="79" y1="53.5" x2="99" y2="53.5" stroke="black"/>
+                    <rect id="Rectangle 3" x="99.5" y="49.5" width="6" height="25" fill="white" stroke="black"/>
+                    <line id="Line 24" class="bottom-line" x1="5" y1="137.5" x2="69" y2="137.5" stroke="black"/>
+                    <line id="Line 25" x1="4.53532e-08" y1="34.5" x2="38" y2="34.5" stroke="black"/>
+                    <line id="Line 26" x1="4.53532e-08" y1="39.5" x2="38" y2="39.5" stroke="black"/>
+                    <line id="Line 27" x1="4.53532e-08" y1="44.5" x2="38" y2="44.5" stroke="black"/>
+                    <line id="Line 28" x1="4.53532e-08" y1="49.5" x2="38" y2="49.5" stroke="black"/>
+                    <line id="Line 29" x1="4.53532e-08" y1="54.5" x2="38" y2="54.5" stroke="black"/>
+                    <line id="Line 30" x1="4.53532e-08" y1="64.5" x2="38" y2="64.5" stroke="black"/>
+                    <line id="Line 31" x1="4.53532e-08" y1="69.5" x2="38" y2="69.5" stroke="black"/>
+                    <line id="Line 32" x1="4.53532e-08" y1="74.5" x2="38" y2="74.5" stroke="black"/>
+                    <line id="Line 33" x1="4.53532e-08" y1="79.5" x2="38" y2="79.5" stroke="black"/>
+                    <line id="Line 43" x1="4.53532e-08" y1="84.5" x2="38" y2="84.5" stroke="black"/>
+                    <line id="Line 34" x1="4.53532e-08" y1="59.5" x2="38" y2="59.5" stroke="black"/>
+                    <line id="Line 35" x1="99" y1="53.5" x2="106" y2="53.5" stroke="black"/>
+                    <line id="Line 36" x1="99" y1="55.5" x2="106" y2="55.5" stroke="black"/>
+                    <line id="Line 37" x1="99" y1="58.5" x2="106" y2="58.5" stroke="black"/>
+                    <line id="Line 38" x1="99" y1="60.5" x2="106" y2="60.5" stroke="black"/>
+                    <line id="Line 39" x1="99" y1="63.5" x2="106" y2="63.5" stroke="black"/>
+                    <line id="Line 40" x1="99" y1="65.5" x2="106" y2="65.5" stroke="black"/>
+                    <line id="Line 41" x1="99" y1="68.5" x2="106" y2="68.5" stroke="black"/>
+                    <line id="Line 42" x1="99" y1="70.5" x2="106" y2="70.5" stroke="black"/>
+                    <path id="Rectangle 4" d="M44.9835 106.663L41.1865 99.8709L44.991 93.6258L48.8078 99.7461L44.9835 106.663Z" fill="white" stroke="black"/>
+                    <g id="Projector Light">
+                    <g class="projector-light-lines" id="Projector Light (Visible Lines)">
+                    <path id="Line 74" d="M109.407 64.1641L148.408 86.1672" stroke="black"/>
+                    <path id="Line 73" d="M109.5 58L148.5 36" stroke="black"/>
+                    <line id="Line 72" x1="109.334" y1="67.6279" x2="148.33" y2="102.629" stroke="black"/>
+                    <path id="Line 71" d="M109.47 55.0015L148.47 20" stroke="black"/>
+                    <line id="Line 70" y1="-0.5" x2="61.8466" y2="-0.5" transform="matrix(0.630593 0.776114 0.776114 -0.630593 110 72)" stroke="black"/>
+                    <line id="Line 69" x1="109.612" y1="50.6847" x2="148.612" y2="2.6847" stroke="black"/>
+                    <line id="Line 75" x1="109.831" y1="59.5294" x2="148.831" y2="45.5294" stroke="black"/>
+                    <line id="Line 76" y1="-0.5" x2="41.4367" y2="-0.5" transform="matrix(0.941195 0.337865 0.337865 -0.941195 110 61)" stroke="black"/>
+                    <line id="Line 77" x1="110" y1="60.5" x2="149" y2="60.5" stroke="black"/>
+                    </g>
+                    </g>
+                    </g>
+                    </svg>
+                    
+            <h4 class="image-title">{projectTitle}</h4>
+            </a>
+        </div>
+</div>
+
+<style define:vars={{ positionXstr, positionYstr }}>
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .project-area {
+        width: 100%;
+        height: 100%;
+        max-height: 300px;
+        z-index: 1;
+    }
+
+    .image-box {
+        margin-left: var(--positionXstr);
+        margin-top: var(--positionYstr);
+        display: grid;
+        width: fit-content;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .filmo-svg {
+        padding: 20px 40px;
+        z-index: 2;
+        color: black;
+    }
+
+    .film-reel {
+        transform-box: fill-box;
+        transform-origin: 50% 50%;
+    }
+
+    .projector-light-body {
+        opacity: 0;
+    }
+
+    .projector-light-lines > * {
+            opacity: 0;
+    }
+
+    .image-title {
+        text-align: center;
+        margin: 0;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    @media(max-width: 1200px) {
+        .image-title {
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: 750px) {
+        .project-area {
+            display: grid;
+            justify-content: center;
+            padding: 2rem 0rem;
+        }
+        .image-box {
+            margin: 0;
+        }
+    }
+
+    @keyframes flicker {
+        0%    { opacity: 0; }
+        20%   { opacity: 1; }
+        80%   { opacity: 0; }
+        100%  { opacity: 1; }
+    }
+
+    @keyframes spin {
+        from{
+        transform: rotate(0deg);}to{
+        transform: rotate(360deg);
+        }
+    }
+
+    .image-box:hover {
+        .projector-light-lines > * {
+            animation: flicker 0.5s infinite;
+        }
+        .film-reel {
+            animation: spin 1.5s linear infinite;
+        }
+        .image-title {
+            opacity: 1;
+        }
+    }
+
+</style>

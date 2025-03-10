@@ -1,7 +1,7 @@
 ---
-title: "Severance Computer Summary"
+title: "Research"
 project: "Severance Computer"
-section: "Summary"
+section: "Research"
 pubDate: 2023-04-30
 description: ""
 author: "Henry Boyd"

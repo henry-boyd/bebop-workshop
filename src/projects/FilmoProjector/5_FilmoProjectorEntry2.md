@@ -1,5 +1,5 @@
 ---
-title: "11.23.2024 Entry 2"
+title: "Entry 2"
 project: "Bell & Howell Filmo S 16mm Projector Rebuild"
 section: "Entry 2"
 pubDate: 2023-04-30

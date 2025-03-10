@@ -1,6 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectPageLayout from '../../layouts/ProjectPageLayout.astro';
 
 const posts = await getCollection('filmo');
 
@@ -8,6 +8,6 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BaseLayout>
+<ProjectPageLayout>
   <Content />
-</BaseLayout>
+</ProjectPageLayout>

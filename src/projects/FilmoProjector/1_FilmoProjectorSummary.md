@@ -1,5 +1,5 @@
 ---
-title: "Summary"
+title: "Make Shadows Dance"
 project: "Bell & Howell Filmo S 16mm Projector Rebuild"
 section: "Summary"
 pubDate: 2023-04-30
@@ -12,4 +12,4 @@ tags: []
 draft: true
 ---
 
-Summary Section
+Long ago in a distant land called Michigan, our young hero set out to bring life to an ancient mechanism.

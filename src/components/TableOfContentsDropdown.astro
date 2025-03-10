@@ -13,15 +13,18 @@ const projectCollection = await getCollection(projectName, ({ data }) => {
 
 ---
 
-<div class="table-of-contents-section">
-    <div class="table-of-contents-box">
+<div class="table-of-contents-section" onclick="menuExpandCollapse()">
+    <div class="table-of-contents-box-dropdown">
         <ul class="table-of-contents">
+            <li>Top</li>
             {projectCollection.map(post => (
               <li>{post.data.title}</li>
             ))}
         </ul>
-        <button class="menu-button" id="menu-button" onclick="menuExpandCollapse()">
-            <img src="src/assets/DropDownArrow.svg"/>
+        <button class="menu-button" id="menu-button">
+            <svg class="menu-button-svg" width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2.14215L16.1421 16.2843L30.2843 2.14215" stroke="black" stroke-width="4"/>
+            </svg>
         </button>
 
         <script type="text/Javascript">
@@ -31,7 +34,6 @@ const projectCollection = await getCollection(projectName, ({ data }) => {
             }
             
             var coll = document.getElementsByClassName("table-of-contents-section");
-            var i;
             for (i = 0; i < coll.length; i++) {
             coll[i].addEventListener("click", function() {
                 this.classList.toggle("active");
@@ -52,26 +54,24 @@ const projectCollection = await getCollection(projectName, ({ data }) => {
     .rotate {
     transform: rotate(180deg);
     }
-
+    
     .table-of-contents-section {
         max-height: 60px;
-        width: 100%;
         position: sticky;
         top: 0;
         z-index: 2;
-        background-color: white;
-        border: 1px solid #000;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
     }
 
-    .table-of-contents-box {
+    .table-of-contents-box-dropdown {
         max-width: 47.5rem;
         margin-left: auto;
         margin-right: auto;
         display: flex;
         justify-content: space-between;
-        border: 1px solid #000;
     }
 
     .table-of-contents {

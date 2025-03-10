@@ -1,38 +1,49 @@
 @font-face {
-    font-family: 'Inter';
-    src: url('/fonts/Inter-VariableFont_opsz,wght.ttf');
-    font-weight: 100 900;
-    font-display: swap;
+    font-family: "Atkinson Hyperlegible Next", serif;
+    src: url('/fonts/AtkinsonHyperlegibleNext/AtkinsonHyperlegibleNext-Regular.woff2');
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 :root {
-    
-    
-    --clr-body: black;
-    --clr-heading: grey;
-
     --fw-bold: 900;
-
-
-    --ff-base: "Inter", sans-serif;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+    --ff-base: "Atkinson Hyperlegible Next", serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
 h1,
 h2,
 h3,
 h4,
-p {
+p,
+li,
+body {
     margin: 0;
+    font-family: var(--ff-base);
+}
+
+a {
+    color: black;
 }
 
 h1,
@@ -45,30 +56,113 @@ h4 {
     text-wrap: balance;
 }
 
+body {
+    line-height: 1.6;
+}
+
 p,
 li {
     text-wrap: pretty;
     max-width: 65ch;
 }
 
+html.dark {
+    background-color: #000000;
+    color: #fff;
+  }
+  
+  .dark a {
+    background-color: #000000;
+    color: #fff;
+  }
+
+  .dark .lightbulbsvg {
+    stroke: white;
+  }
+
+  .dark .lightbulbsvg > circle {
+    fill: white;
+  }
+  
+  .dark .filmo-svg {
+    stroke: white;
+    fill: white;
+  }
+
+  .dark .filmo-svg .inner-reel-circle {
+    fill: black;
+  }
+
+  .dark .filmo-svg .bottom-line {
+    stroke: white;
+  }
+
+
+  .dark .projector-light-lines > * {
+    stroke: white;
+  }
+
+  .dark .webster-teletalk-svg {
+    fill: white;
+  }
+
+  .dark .webster-teletalk-svg .button-group > path {
+    stroke: black;
+    fill: white;
+  }
+
+  .dark .hamburger-menu-icon-svg > path {
+    stroke: white;
+  }
+
+  .dark .menu-icon-path {
+    fill: white;
+  }
+
+  .dark .visible-chain > circle {
+    fill: white;
+    stroke: white;
+  }
+
+  .dark .visible-chain > path {
+    fill: white;
+    stroke: white;
+  }
+
+  .dark .end-of-chain {
+    fill: white;
+  }
+
+  .dark .table-of-contents-box {
+    border: 1px solid white;
+  }
+
+  .dark .table-of-contents-section {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+  }
+
+  .dark .menu-button-svg > path {
+    stroke: white;
+  }
+
+  .dark .journal-summary:before {
+    border-left: 4px solid white;
+  }
+
+  .dark .journal-entry:before {
+    border-left: 4px solid white;
+    }
+
+  .dark .title-dashed-line {
+    border-top: 4px dashed white;
+}
+  
 @view-transition {
     navigation: auto;
-}
-
-[role="list"] {
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 img {
     max-width: 100%;
     display: block;
-}
-
-body {
-    margin: 0;
-    color: var(--clr-body);
-    font-family: var(--ff-base);
-    line-height: 1.6;
 }

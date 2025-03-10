@@ -17,9 +17,8 @@ const collectionName = await getCollection(projectName, ({ data }) => {
 
 ---
 <div class="project-journal-layout">
-    <div class="project-journal-timeline-bar"></div>
     <div class="project-journal">
-        <JournalSummary projectTitle ={projectTitle}/>
+        <JournalSummary projectTitle ={projectTitle} />
         {collectionName.map(post => (
             <JournalEntry projectName={projectName} entryID={post.id} entryTitle={post.data.title} />
           ))}
@@ -29,14 +28,12 @@ const collectionName = await getCollection(projectName, ({ data }) => {
 <style>
     .project-journal-layout {
         display: grid;
-        grid-template-columns: 4px 1fr;
+        grid-template-columns: 1fr;
     }
 
     .project-journal-timeline-bar {
-        margin-top: 56px;
         background-color: black;
         width: 4px;
-        height: (100%-56px);
         z-index: 1;
     }
 </style>

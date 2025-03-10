@@ -19,29 +19,49 @@ const { Content } = await render(entry);
 ---
 
 <div class="journal-entry">
-    <div class="title-dashed-line"></div>
-    <h1>{entryTitle}</h1>
+    <div class="title-section">
+        <div class="title-dashed-line"></div>
+        <h3>{entryTitle}</h3>
+    </div>
     <div class="journal-entry-content">
           <Content />
     </div>
 </div>
 
 <style>
-    .journal-entry {
-        position: relative;
-        padding-top: 40px;
-        border: 1px solid black;
+    .journal-entry:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    border-left: 4px solid black;
     }
     
+    .journal-entry {
+        position: relative;
+    }
+
+   .title-section {
+        display: flex;
+        align-items: center;
+        min-height: 80px;
+   }
+    
     .title-dashed-line {
-        position: absolute;
         top: 76px;
-        border-top: 4px dashed black;   
+        margin-left: 4px;
+        border-top: 4px dashed black;
         width: 35px;
         height: 4px;
    }
 
     h1 {
-    padding-left: 40px;
+    padding-left: 10px;
+    }
+
+    .journal-entry-content {
+        display: grid;
+        justify-content: center;
+        padding: 0 2rem;
     }
 </style>

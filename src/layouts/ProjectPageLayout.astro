@@ -1,8 +1,13 @@
 ---
 import ProjectJournalHeader from "../components/ProjectJournalHeader.astro";
+import LightbulbAlreadyOn from '../components/LightbulbAlreadyOn.astro'
+import HomepageHeader from '../components/HomepageHeader.astro';
+import MainHeader from '../components/MainHeader.astro';
+
 import TableOfContentsDropdown from '../components/TableOfContentsDropdown.astro';
 import ProjectJournalBody from "../components/ProjectJournalBody.astro";
 import type { CollectionKey } from 'astro:content';
+import '../styles/global.css';
 
 interface Props {
     projectName: CollectionKey;
