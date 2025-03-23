@@ -1,8 +1,10 @@
+/*
+
 import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 
 export async function GET(context) {
-  const posts = await getCollection("projects");
+  const posts = await getCollection("filmo");
   return rss({
     title: "Bebop Workshop",
     description: "Tinkering with curiosity, building with reckless abandon",
@@ -16,3 +18,5 @@ export async function GET(context) {
     customData: `<language>en-us</language>`,
   });
 }
+
+*/

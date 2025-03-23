@@ -12,4 +12,4 @@ tags: []
 draft: true
 ---
 
-Long ago in a distant land called Michigan, our young hero set out to bring life to an ancient mechanism.
+Long ago in a distant land called Michigan, our young hero set out to bring life to an ancient mechanism...
