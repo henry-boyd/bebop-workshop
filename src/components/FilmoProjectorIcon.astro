@@ -1,23 +1,17 @@
 ---
 interface Props {
-    positionX: number;
-    positionY: number;
     projectTitle: string;
     projectURL: string;
 }
 
-const { positionX, positionY, projectTitle, projectURL } = Astro.props
-
-const positionXstr = positionX + "%";
-const positionYstr = positionY + "%";
+const { projectTitle, projectURL } = Astro.props
 
 ---
 
 <div class="project-area">
-        <div class="image-box">
+        <div class="image-box"> 
             <a href={projectURL}>
-
-                <svg class="filmo-svg" width="149" height="140" viewBox="0 0 149 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="filmo-svg" width="250" height="200" viewBox="0 -25 150 175" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="Group 3" class="filmo-projector-svg">
                     <path id="Projector Neck" d="M58.381 137.5H21.2682C21.9411 136.979 22.6622 136.275 23.4043 135.455C24.9865 133.707 26.7125 131.374 28.333 128.996C31.573 124.242 34.4368 119.24 34.9476 118.214C35.034 118.04 35.1226 117.763 35.2129 117.434C35.3069 117.093 35.4133 116.657 35.5297 116.142C35.7625 115.111 36.039 113.746 36.3403 112.15C36.9431 108.957 37.6482 104.828 38.3072 100.574C38.9661 96.3209 39.5796 91.9393 39.9988 88.2432C40.4159 84.5659 40.6471 81.5171 40.5241 79.9606L40.5087 79.7655C40.5065 79.7016 40.5044 79.6155 40.5029 79.5H51.4826C51.4907 95.013 51.8765 105.614 52.5006 118.016C52.7034 122.046 53.9455 125.666 55.2587 128.971C55.5329 129.661 55.8089 130.335 56.0793 130.995C57.0243 133.302 57.8999 135.439 58.381 137.5Z" stroke="black"/>
 
@@ -86,27 +80,27 @@ const positionYstr = positionY + "%";
                     </g>
                     </svg>
                     
-            <h4 class="image-title">{projectTitle}</h4>
+            <div class="title-section"><h4 class="image-title">{projectTitle}</h4></div>
             </a>
         </div>
 </div>
 
-<style define:vars={{ positionXstr, positionYstr }}>
+<style>
     
     a {
         text-decoration: none;
     }
     
     .project-area {
-        width: 100%;
-        height: 100%;
-        max-height: 300px;
+        display: flex;
+        max-width: 250px;
+        max-height: 250px;
         z-index: 1;
+        border: 1px solid black;
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
     }
 
     .image-box {
-        margin-left: var(--positionXstr);
-        margin-top: var(--positionYstr);
         display: grid;
         width: fit-content;
         justify-content: center;
@@ -114,7 +108,6 @@ const positionYstr = positionY + "%";
     }
 
     .filmo-svg {
-        padding: 20px 40px;
         z-index: 2;
         color: black;
     }
@@ -130,6 +123,10 @@ const positionYstr = positionY + "%";
 
     .projector-light-lines > * {
             opacity: 0;
+    }
+
+    .title-section {
+        height: 50px;
     }
 
     .image-title {
@@ -149,7 +146,6 @@ const positionYstr = positionY + "%";
         .project-area {
             display: grid;
             justify-content: center;
-            padding: 2rem 0rem;
         }
         .image-box {
             margin: 0;

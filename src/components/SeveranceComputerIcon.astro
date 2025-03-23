@@ -1,23 +1,17 @@
 ---
 interface Props {
-    positionX: number;
-    positionY: number;
     projectTitle: string;
     projectURL: string;
 }
 
-const { positionX, positionY, projectTitle, projectURL } = Astro.props
+const { projectTitle, projectURL } = Astro.props
 
-const positionXstr = positionX + "%";
-const positionYstr = positionY + "%";
-
----
+--- 
 
 <div class="project-area">
         <div class="image-box">
-            <a href={projectURL}>
-
-                <svg class="severance-computer-svg" width="194" height="125" viewBox="0 0 194 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a href={projectURL}> 
+                <svg class="severance-computer-svg" width="250" height="200" viewBox="-50 -50 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="Group 4">
                     <g id="Computer Body">
                     <path id="Rectangle 11" d="M12.0533 4.55415C12.2737 2.25647 14.2101 0.5 16.5195 0.5H177.507C179.806 0.5 181.738 2.24168 181.971 4.52818C185.52 39.3222 185.477 60.6682 181.966 95.4657C181.735 97.7549 179.802 99.5 177.501 99.5H16.5531C14.2312 99.5 12.2884 97.7246 12.0805 95.4123C8.95552 60.658 8.7191 39.3158 12.0533 4.55415Z" fill="white" stroke="black"/>
@@ -168,7 +162,7 @@ const positionYstr = positionY + "%";
                     </defs>
                     </svg>
 
-            <h4 class="image-title">{projectTitle}</h4>
+                    <div class="title-section"><h4 class="image-title">{projectTitle}</h4></div>
             </a>
         </div>
 </div>
@@ -231,10 +225,10 @@ const positionYstr = positionY + "%";
     })
 </script>
 
-<style define:vars={{ positionXstr, positionYstr }}>
+<style>
     
     :root {
-        --animation-distance: 4px;
+        --animation-distance: 4px;  
     }
 
     a {
@@ -243,15 +237,15 @@ const positionYstr = positionY + "%";
     }
     
     .project-area {
-        width: 100%;
-        height: 100%;
-        max-height: 300px;
+        display: flex;
+        max-width: 250px;
+        max-height: 250px;
         z-index: 1;
+        border: 1px solid black;
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
     }
 
     .image-box {
-        margin-left: var(--positionXstr);
-        margin-top: var(--positionYstr);
         display: grid;
         width: fit-content;
         justify-content: center;
@@ -259,7 +253,6 @@ const positionYstr = positionY + "%";
     }
 
     .severance-computer-svg {
-        padding: 20px 40px;
         z-index: 2;
         color: black;
     }
@@ -277,6 +270,10 @@ const positionYstr = positionY + "%";
     .numbers-misc > * {
         transform-origin: 50% 50%;
         transform-box: fill-box;
+    }
+
+    .title-section {
+        height: 50px;
     }
 
     .image-title {
@@ -302,7 +299,6 @@ const positionYstr = positionY + "%";
         .project-area {
             display: grid;
             justify-content: center;
-            padding: 2rem 0rem;
         }
         .image-box {
             margin: 0;

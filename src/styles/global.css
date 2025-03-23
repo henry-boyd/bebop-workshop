@@ -111,6 +111,10 @@ html.dark {
     fill: white;
   }
 
+  .dark #click-waves > path {
+    stroke: white;
+  }
+
   .dark .hamburger-menu-icon-svg > path {
     stroke: white;
   }

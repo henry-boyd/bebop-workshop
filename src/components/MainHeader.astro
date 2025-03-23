@@ -15,6 +15,12 @@ import TinyLightbulbAlreadyOn from './TinyLightbulbAlreadyOn.astro';
     
             <nav class="homepage-menu">
                 <a href="/about">About</a></a>
+                <li class="projects"><a href="#">Projects</a>
+                    <ul class="submenu">
+                        <li><a href="/filmoprojector">Filmo Projector</a></li>
+                        <li><a href="/severancecomputer">Lumon Computer</a></li>
+                    </ul>
+                </li>
                 <a class="menu-icon" href="https://instagram.com/bebopworkshop"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="Insta Icon 1" clip-path="url(#clip0_112_41)">
                     <g id="Clip path group">
@@ -51,6 +57,7 @@ import TinyLightbulbAlreadyOn from './TinyLightbulbAlreadyOn.astro';
 </header>
 
 <style>
+
     .homepage-header {
         display: flex;
         margin-left: 200px;
@@ -80,10 +87,18 @@ import TinyLightbulbAlreadyOn from './TinyLightbulbAlreadyOn.astro';
         padding: 20px 30px;
         gap: 12px;
         align-items: center;
+        position: relative;
+        list-style-type: none;
+
     }
 
-    .homepage-menu > a {
+    .homepage-menu > a, li {
         max-height: 30px;
+    }
+
+    li {
+        align-items: center;
+
     }
 
     a {
@@ -97,7 +112,32 @@ import TinyLightbulbAlreadyOn from './TinyLightbulbAlreadyOn.astro';
         align-items: center;
     }
 
-    @media (max-width: 850px) {
+    .submenu {
+        position: absolute;
+        top: 55px;
+        left: 100px;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        z-index: 3;
+        display: none;
+        overflow: hidden;
+        background-color: white;
+        margin: 0;
+    }
+
+    .projects:hover .submenu {
+        display: block;
+    }
+
+    .submenu > li:hover {
+        text-decoration: underline;
+    }
+
+    .projects:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
         .homepage-header {
             display: grid;
             padding: 0 0;
@@ -108,7 +148,7 @@ import TinyLightbulbAlreadyOn from './TinyLightbulbAlreadyOn.astro';
         }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 650px) {
         .homepage-header {
             display: grid;
             grid-template-columns: 1fr;

@@ -1,16 +1,11 @@
 ---
 
 interface Props {
-    positionX: number;
-    positionY: number;
     projectTitle: string;
     projectURL: string;
 }
 
-const { positionX, positionY, projectTitle, projectURL } = Astro.props
-
-const positionXstr = positionX + "%";
-const positionYstr = positionY + "%";
+const { projectTitle, projectURL } = Astro.props
 
 ---
 <div class="project-area">
@@ -22,7 +17,7 @@ const positionYstr = positionY + "%";
         </div>
 </div>
 
-<style define:vars={{ positionXstr, positionYstr }}>
+<style> 
     
     a {
         color: black;
@@ -30,14 +25,11 @@ const positionYstr = positionY + "%";
     }
     
     .project-area {
-        width: 100%;
-        height: 100%;;
+        display: flex;
         z-index: 1;
     }
 
     .image-box {
-        margin-left: var(--positionXstr);
-        margin-top: var(--positionYstr);
         display: grid;
         width: fit-content;
         height: fit-content;

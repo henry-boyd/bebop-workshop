@@ -10,24 +10,13 @@ import WebsterTeletalkIcon from '../components/WebsterTeletalkIcon.astro';
 import '../styles/global.css';
 
 interface Props {
-    positionX: number;
-    positionY: number;
 	projectTitle: string;
 	projectURL: string;
 }
 
-const positionX1 = 55;
-const positionY1 = 0;
-const positionX2 = 15;
-const positionY2 = 10;
-const positionX3 = 35;
-const positionY3 = 0;
-const positionX4 = 0;
-const positionY4 = 10;
-
 const project1 = "Filmo Projector";
 const project1url = "/filmoprojector";
-const project2 = "Severance Computer";
+const project2 = "Lumon Computer";
 const project2url = "/severancecomputer";
 const project3 = "Coming Soon!";
 const project3url = "/comingsoon";
@@ -117,14 +106,16 @@ const project3url = "/comingsoon";
 </svg>
 
 <div class="on-section" id="onSection">
-	<MainHeader />
+	<MainHeader /> 
+</div>
+<div class="wiring-section">
 	<main class="homepage-projects-grid">
-		<FilmoProjectorIcon positionX = {positionX1} positionY = {positionY1} projectTitle = {project1} projectURL = {project1url} />
-		<SeveranceComputerIcon positionX = {positionX2} positionY = {positionY2} projectTitle = {project2} projectURL = {project2url} />
-		<ZenithRemoteIcon positionX = {positionX3} positionY = {positionY3} projectTitle = {project3} projectURL = {project3url} />
-		<WebsterTeletalkIcon positionX = {positionX4} positionY = {positionY4} projectTitle = {project3} projectURL = {project3url} />
+		<FilmoProjectorIcon projectTitle = {project1} projectURL = {project1url} />
+		<SeveranceComputerIcon projectTitle = {project2} projectURL = {project2url} />
+		<ZenithRemoteIcon projectTitle = {project3} projectURL = {project3url} />
+		<WebsterTeletalkIcon projectTitle = {project3} projectURL = {project3url} />
 	</main>
-<div/>
+</div>
 
 <script type="text/Javascript">
 
@@ -134,6 +125,7 @@ const project3url = "/comingsoon";
     const arrow = entireBulb.querySelector(".lightbulb-arrow");
 	
 	const onSection = document.querySelector('.on-section');
+	const wiringSection = document.querySelector('.wiring-section');
 
 
     chain.addEventListener("click", function () {
@@ -142,6 +134,8 @@ const project3url = "/comingsoon";
         bulb.style.animation = "bulbLight .5s forwards";
 
 		onSection.style.animation = "fadeIn 2s both";
+		wiringSection.style.animation = "fadeIn 2s both";
+
     });
 
 </script>
@@ -151,21 +145,25 @@ const project3url = "/comingsoon";
 		max-width: 1000px;
 		display: grid;
 		grid-template-columns: 1fr;
-		justify-content: center;
 		margin-left: auto;
 		margin-right: auto;
 	} 
 
-	.on-section {
+	.on-section, .wiring-section {
 		opacity: 0%;
 		animation-name: fadeIn;
 	}
 
 	.homepage-projects-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(275px, 300px));
+		max-width: 800px;
+		justify-content: center;
 		justify-items: center;
+		margin-left: auto;
+		margin-right: auto;
 		padding-top: 2rem;
+		grid-gap: 40px;
 	}
 
 	.lightbulbsvg {
@@ -196,7 +194,7 @@ const project3url = "/comingsoon";
         z-index: 2;
     }
 
-    @media(max-width: 600px) {
+    @media(max-width: 650px) {
 		.on-section {
 			display: block;
 			opacity: 100%;
@@ -205,6 +203,11 @@ const project3url = "/comingsoon";
 		.lightbulbsvg {
                 display: none;
         }
+
+		.homepage-projects-grid {
+		grid-template-columns: 1fr;
+		padding-bottom: 2rem;
+		}
     }
 
     @keyframes fadeOut {
