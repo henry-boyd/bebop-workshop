@@ -75,6 +75,10 @@ html.dark {
     background-color: #000000;
     color: #fff;
   }
+
+  .dark h1 {
+    color: #fff;
+  }
   
   .dark a {
     background-color: #000000;
