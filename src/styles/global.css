@@ -58,7 +58,6 @@ h4 {
 
 body {
     line-height: 1.6;
-      max-width: 1000px;
       display: grid;
       grid-template-columns: 1fr;
       margin-left: auto;
