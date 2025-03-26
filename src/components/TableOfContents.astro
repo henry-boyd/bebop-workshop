@@ -26,7 +26,7 @@ const projectCollection = await getCollection(projectName, ({ data }) => {
     .table-of-contents {
         position: sticky;
         display: flex;
-        padding: 160px 12px 300px 13px;
+        padding: 160px 1rem 300px 0px;
         flex-direction: column;
         align-items: center;
         flex-shrink: 0;
@@ -36,9 +36,8 @@ const projectCollection = await getCollection(projectName, ({ data }) => {
         list-style-type: none;
         display: flex;
         position: fixed;
-        padding: 15px 28px;
-        margin-right: 2rem;
-        width: 16ch;
+        padding: 1rem 28px 1rem 1rem;
+        width: 20ch;
         flex-direction: column;
         text-align: right;
         border: 1px solid black;
@@ -51,7 +50,7 @@ const projectCollection = await getCollection(projectName, ({ data }) => {
         margin: .25rem 0;
     }
 
-    @media(max-width: 1200px) {
+    @media(max-width: 1250px) {
         .table-of-contents {
         display: none;
     }
