@@ -173,6 +173,11 @@ html.dark {
   .dark .title-dashed-line {
     border-top: 4px dashed white;
 }
+
+.dark .table-of-contents-section {
+  background-color: black;
+  text: white;
+}
   
 @view-transition {
     navigation: auto;
