@@ -1,7 +1,8 @@
 ---
 title: "Research"
 project: "Severance Computer"
-section: "Research"
+section: "research"
+sectionid: "#research"
 pubDate: 2023-04-30
 description: ""
 author: "Henry Boyd"

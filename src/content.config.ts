@@ -9,6 +9,9 @@ const filmo = defineCollection({
     loader: glob({ pattern: '**/[^_]*.md', base: "./src/projects/FilmoProjector" }),
     schema: z.object({
       title: z.string(),
+      project: z.string(),
+      section: z.string(),
+      sectionid: z.string(),
       pubDate: z.date(),
       description: z.string(),
       author: z.string(),
@@ -25,6 +28,9 @@ const severancecomputer = defineCollection({
     loader: glob({ pattern: '**/[^_]*.md', base: "./src/projects/SeveranceComputer" }),
     schema: z.object({
       title: z.string(),
+      project: z.string(),
+      section: z.string(),
+      sectionid: z.string(),
       pubDate: z.date(),
       description: z.string(),
       author: z.string(),

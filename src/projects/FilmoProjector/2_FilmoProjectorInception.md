@@ -1,7 +1,8 @@
 ---
 title: "Inception"
 project: "Bell & Howell Filmo S 16mm Projector Rebuild"
-section: "Inception"
+section: "inception"
+sectionid: "#inception"
 pubDate: 2023-04-30
 description: ""
 author: "Henry Boyd"

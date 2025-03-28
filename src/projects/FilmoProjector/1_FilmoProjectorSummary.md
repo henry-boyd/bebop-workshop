@@ -1,13 +1,14 @@
 ---
 title: "To Make Shadows Dance"
 project: "Bell & Howell Filmo S 16mm Projector Rebuild"
-section: "Summary"
+section: "tomakeshadowsdance"
+sectionid: "#tomakeshadowsdance"
 pubDate: 2023-04-30
 description: ""
 author: "Henry Boyd"
 image:
     url: ""
-    alt: ""
+    alt: "" 
 tags: []
 draft: true
 ---

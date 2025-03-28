@@ -3,9 +3,10 @@ import { getCollection, getEntry, render,  } from 'astro:content';
 
 interface Props {
     projectTitle: string;
+    entrySection: string;
 }
 
-const { projectTitle } = Astro.props;
+const { projectTitle, entrySection } = Astro.props;
 
 const image = projectTitle;
 const featuredImage = "/src/assets/ProjectImages/" + image + "/featuredimage.jpg";

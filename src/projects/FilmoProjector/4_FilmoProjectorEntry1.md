@@ -1,7 +1,8 @@
 ---
 title: "Entry 1"
 project: "Bell & Howell Filmo S 16mm Projector Rebuild"
-section: "Entry 1"
+section: "entry1"
+sectionid: "#entry1"
 pubDate: 2023-04-30
 description: ""
 author: "Henry Boyd"
@@ -12,4 +13,4 @@ tags: []
 draft: true
 ---
 
-Entry 1 
+Entry 1  

@@ -1,7 +1,8 @@
 ---
 title: "Research"
 project: "Bell & Howell Filmo S 16mm Projector Rebuild"
-section: "Research"
+section: "research"
+sectionid: "#research" 
 pubDate: 2023-04-30
 description: ""
 author: "Henry Boyd"
@@ -12,4 +13,4 @@ tags: []
 draft: true
 ---
 
-Research Section 
+Research Section  

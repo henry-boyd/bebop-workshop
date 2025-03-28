@@ -9,16 +9,16 @@ interface Props {
 const { projectName } = Astro.props;
 const projectCollection = await getCollection(projectName, ({ data }) => {
   return data.draft == true;
-}) ;
+}) ; 
 
 ---
 
 <div class="table-of-contents-section" onclick="menuExpandCollapse()">
     <div class="table-of-contents-box-dropdown">
         <ul class="table-of-contents">
-            <li>Top</li>
+            <a class="section-link" href="#top"><li>Top</li></a>
             {projectCollection.map(post => (
-              <li>{post.data.title}</li>
+              <a class="section-link" href={post.data.sectionid}><li>{post.data.title}</li></a>
             ))}
         </ul>
         <button class="menu-button" id="menu-button">
@@ -53,6 +53,10 @@ const projectCollection = await getCollection(projectName, ({ data }) => {
 <style>
     .rotate {
     transform: rotate(180deg);
+    }
+
+    .section-link {
+        width: fit-content;
     }
     
     .table-of-contents-section {
@@ -104,6 +108,10 @@ const projectCollection = await getCollection(projectName, ({ data }) => {
         text-color: black;
         margin: .25rem 0;
         z-index: 2;
+    }
+
+    a {
+        text-decoration: none;
     }
 
     @media(min-width: 1250px) {
