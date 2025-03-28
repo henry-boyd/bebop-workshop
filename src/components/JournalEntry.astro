@@ -17,10 +17,10 @@ if (!entry) {
 }
 const { Content } = await render(entry);
 
-let divTitle = "journal-entry" + entryID;
 ---
 
-<div class={divTitle}>
+<div id={entryTitle}>
+    <a id={entryTitle}>
     <div class="journal-entry">
     <div class="title-section">
         <div class="title-dashed-line"></div>

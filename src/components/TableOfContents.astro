@@ -15,9 +15,9 @@ const projectCollection = await getCollection(projectName, ({ data }) => {
 
 <div class="table-of-contents">
         <ul class="table-of-contents-box">
-            <li>Top</li>
+            <a href="#top"><li>Top</li></a>
             {projectCollection.map(post => (
-              <li>{post.data.title}</li>
+              <a href="#top"><li>{post.data.title}</li></a>
             ))}
         </ul>
 </div>
@@ -45,7 +45,6 @@ const projectCollection = await getCollection(projectName, ({ data }) => {
     }
 
     li {
-        text-decoration: none;
         text-color: black;
         margin: .25rem 0;
     }

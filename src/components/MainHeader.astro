@@ -14,7 +14,7 @@ import TinyLightbulbAlreadyOn from './TinyLightbulbAlreadyOn.astro';
         </div>
     
             <nav class="homepage-menu">
-                <a href="/about">About</a></a>
+                <li><a href="/about">About</a></li>
                 <li class="projects"><a href="#">Projects</a>
                     <ul class="submenu">
                         <li><a href="/filmoprojector">Filmo Projector</a></li>
@@ -118,7 +118,7 @@ import TinyLightbulbAlreadyOn from './TinyLightbulbAlreadyOn.astro';
         padding-top: 1rem;
         padding-left: 1rem;
         z-index: 3;
-        display: none;
+        display: block;;
         overflow: hidden;
         background-color: white;
         margin: 0;
@@ -128,11 +128,15 @@ import TinyLightbulbAlreadyOn from './TinyLightbulbAlreadyOn.astro';
         display: block;
     }
 
+    .submenu:hover .submenu {
+        display: block;
+    }
+
     .submenu > li:hover {
         text-decoration: underline;
     }
 
-    .projects:hover {
+    li:hover {
         text-decoration: underline;
     }
 
