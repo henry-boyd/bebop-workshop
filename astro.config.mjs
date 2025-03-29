@@ -1,12 +1,11 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
-
-import vercel from '@astrojs/vercel/static';
-
+// Import /serverless for a Serverless SSR site
+import vercelServerless from '@astrojs/vercel/serverless';
+ 
 export default defineConfig({
-  // Must be 'static' or 'hybrid'
-  output: 'static',
-  adapter: vercel({
+  output: 'server',
+  adapter: vercelServerless({
     imageService: true,
+    maxDuration: 8,
   }),
 });
