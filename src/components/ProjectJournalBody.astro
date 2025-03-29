@@ -8,16 +8,17 @@ import type { CollectionKey } from 'astro:content';
 interface Props {
     projectName: CollectionKey;
     projectTitle: string;
+    featuredImageAltText: string;
 }
 
-const { projectName, projectTitle } = Astro.props;
+const { projectName, projectTitle, featuredImageAltText } = Astro.props;
 ---
 
 <main>
     <div class="journal-hero"></div>
     <div class="journal-body">
         <TableOfContents projectName={projectName}/>
-        <ProjectJournal projectName={projectName} projectTitle ={projectTitle} >
+        <ProjectJournal projectName={projectName} projectTitle ={projectTitle} featuredImageAltText={featuredImageAltText}>
         </ProjectJournal>
         <div class="right-column"></div>
     </div>

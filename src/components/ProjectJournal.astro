@@ -7,9 +7,10 @@ import { getCollection } from 'astro:content';
 interface Props {
     projectName: CollectionKey;
     projectTitle: string;
+    featuredImageAltText: string;
 }
 
-const { projectName, projectTitle } = Astro.props;
+const { projectName, projectTitle, featuredImageAltText } = Astro.props;
 
 const collectionName = await getCollection(projectName, ({ data }) => {
   return data.draft == true;
@@ -18,7 +19,7 @@ const collectionName = await getCollection(projectName, ({ data }) => {
 ---
 <div class="project-journal-layout">
     <div class="project-journal">
-        <JournalSummary projectTitle ={projectTitle} />
+        <JournalSummary projectName={projectName} featuredImageAltText={featuredImageAltText} projectTitle={projectTitle} />
         {collectionName.map(post => (
             <JournalEntry projectName={projectName} entryID={post.id} entrySection={post.data.section} entryTitle={post.data.title} />
           ))}

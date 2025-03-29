@@ -1,15 +1,24 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import { getCollection, getEntry, render,  } from 'astro:content';
 
 interface Props {
+    projectName: string;
     projectTitle: string;
     entrySection: string;
+    imagePath: string;
+    featuredImageAltText: string;
 }
 
-const { projectTitle, entrySection } = Astro.props;
+const { projectName, projectTitle, entrySection, imagePath, featuredImageAltText } = Astro.props;
 
-const image = projectTitle;
-const featuredImage = "/src/assets/ProjectImages/" + image + "/featuredimage.jpg";
+const image = projectName;
+const featuredImage = "/src/assets/ProjectImages/FeaturedImages/" + image + ".jpg";
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/ProjectImages/FeaturedImages/*.{jpeg,jpg,png,gif}');
+if (!images[featuredImage]) throw new Error(`"${featuredImage}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
+
 
 ---
 
@@ -20,7 +29,7 @@ const featuredImage = "/src/assets/ProjectImages/" + image + "/featuredimage.jpg
     </div>
 
     <div class="journal-featured-image">
-        <img src={featuredImage}>
+        <Image src={images[featuredImage]()} formats={['avif', 'webp']} alt={featuredImageAltText} inferSize: true/>
     </div>
 </div>
 

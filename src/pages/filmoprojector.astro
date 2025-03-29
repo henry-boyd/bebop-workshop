@@ -7,10 +7,12 @@ import type { CollectionKey } from 'astro:content';
 interface Props {
     projectName: CollectionKey;
     projectTitle: string;
+	featuredImageAltText: string;
 }
 
 const projectName = 'filmo'
 const projectTitle = "Bell & Howell Filmo S 16mm Projector Rebuild"
+const featuredImageAltText = "Photo of various unassembled Filmo Projector Parts"
 const collectionName = await getCollection('filmo', ({ data }) => {
   return data.draft == true;
 });
@@ -28,5 +30,5 @@ const collectionName = await getCollection('filmo', ({ data }) => {
 	<link rel="icon" href="/public/favicon.svg" type="image/x-icon">
 <head/>
 
-<ProjectPageLayout projectName={projectName} projectTitle ={projectTitle}>
+<ProjectPageLayout projectName={projectName} projectTitle ={projectTitle} featuredImageAltText={featuredImageAltText}>
 </ProjectPageLayout>

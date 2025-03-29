@@ -7,10 +7,12 @@ import type { CollectionKey } from 'astro:content';
 interface Props {
     projectName: CollectionKey;
     projectTitle: string;
+	featuredImageAltText: string;
 }
 
 const projectName = 'severancecomputer'
 const projectTitle = "Severance Computer"
+const featuredImageAltText = "Lumon Industries Desktop Computer from the TV show Severance"
 const collectionName = await getCollection('severancecomputer', ({ data }) => {
   return data.draft == true;
 });
@@ -27,5 +29,5 @@ const collectionName = await getCollection('severancecomputer', ({ data }) => {
 	<link rel="icon" href="/public/favicon.svg" type="image/x-icon">
 <head/>
 
-<ProjectPageLayout projectName={projectName} projectTitle ={projectTitle}>
+<ProjectPageLayout projectName={projectName} projectTitle ={projectTitle} featuredImageAltText={featuredImageAltText}>
 </ProjectPageLayout>
