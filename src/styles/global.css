@@ -178,6 +178,11 @@ html.dark {
   background-color: black;
   text: white;
 }
+
+.dark .submenu {
+  background-color: black;
+  text: white;
+}
   
 @view-transition {
     navigation: auto;
