@@ -1,8 +1,8 @@
 ---
-title: "Entry 1"
-project: "Bell & Howell Filmo S 16mm Projector Rebuild"
-section: "entry1"
-sectionid: "#entry1"
+title: "Disassembly"
+project: "Bell & Howell 57U Filmo Master 16mm Projector Rebuild"
+section: "disassembly"
+sectionid: "#disassembly"
 pubDate: 2023-04-30
 description: ""
 author: "Henry Boyd"
@@ -13,4 +13,4 @@ tags: []
 draft: true
 ---
 
-Entry 1   
+Entry 1 
