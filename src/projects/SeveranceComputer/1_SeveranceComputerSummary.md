@@ -3,7 +3,7 @@ title: "Lumon Industries"
 project: "Severance Computer"
 section: "summary"
 sectionid: "#summary"
-pubDate: 2023-04-30
+pubDate: 2025-03-31
 description: ""
 author: "Henry Boyd"
 image:

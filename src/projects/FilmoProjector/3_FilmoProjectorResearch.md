@@ -3,7 +3,7 @@ title: "Research"
 project: "Bell & Howell 57U Filmo Master 16mm Projector Rebuild"
 section: "research"
 sectionid: "#research" 
-pubDate: 2023-04-30
+pubDate: 2025-03-29
 description: ""
 author: "Henry Boyd"
 image:

@@ -15,6 +15,7 @@ const { projectName, projectTitle, featuredImageAltText } = Astro.props;
 const collectionName = await getCollection(projectName, ({ data }) => {
   return data.draft == true;
 });
+collectionName.sort((a, b) => b.data.pubDate - a.data.pubDate);
 
 ---
 <div class="project-journal-layout">
@@ -27,7 +28,7 @@ const collectionName = await getCollection(projectName, ({ data }) => {
         <div class="end-of-line">
             <div class="title-section">
                 <div class="title-dashed-line"></div>
-                <h3>End of the Line</h3>
+                <h3>That's All Folks!</h3>
             </div>
         </div>
 </div>
