@@ -23,6 +23,9 @@ Wouldn't you know it, turns out the woman whose estate sale I'd stumbled into ha
 
 ![Bell & Howell Projector Lens](/src/assets/ProjectImages/filmo/lenscompanyname.jpg)
 
+![Bell & Howell Projector Lens](/public/ProjectImages/filmo/lenscompanyname.jpg)
+
+
 \
 \
 But I digress, back to the projector. There it was, tucked away in a corner of the house's basement: a 16mm Bell & Howell Filmo S film projector, still in the original carrying case along with the manual, an oil can, a couple of spare bulbs, and some film reels. From the outside it seemed to be in immaculate condition, the exterior metal pieces still all shiny and chrome. So I was determined to get it running so I could find out what was on these film reels myself. I lugged the projector back across the street, plugged it in, and waited. It slowly whirred to life, light shining out of the front, hummed and clicked for about five seconds, and then a huge plume of smoke burst out of the motor compartment.
