@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import vercelServerless from '@astrojs/vercel/serverless';
  
 export default defineConfig({
-  output: 'hybrid',
+  output: 'static',
   adapter: vercelServerless({
     imageService: true,
     maxDuration: 8,
