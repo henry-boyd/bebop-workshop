@@ -23,8 +23,7 @@ Wouldn't you know it, turns out the woman whose estate sale I'd stumbled into ha
 
 ![Bell & Howell Projector Lens](./filmo/lenscompanyname.jpg)
 
-![Bell & Howell Projector Lens](/src/assets/projects/filmoprojector/filmo/lenscompanyname.jpg)
-
+![Bell & Howell Projector Lens](/src/projects/filmoprojector/filmo/lenscompanyname.jpg)
 
 \
 \
