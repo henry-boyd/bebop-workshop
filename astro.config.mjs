@@ -4,5 +4,5 @@ import vercelStatic from '@astrojs/vercel/static';
  
 export default defineConfig({
   output: 'static',
-  adapter: vercelStatic(),
+  adapter: vercelStatic({imageService: true,}),
 });
