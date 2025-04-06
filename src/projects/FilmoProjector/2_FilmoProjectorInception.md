@@ -21,7 +21,7 @@ Wouldn't you know it, turns out the woman whose estate sale I'd stumbled into ha
 \
 <br>
 
-![Bell & Howell Projector Lens](/public/ProjectImages/filmo/lenscompanyname.jpg)
+![Bell & Howell Projector Lens](/src/assets/ProjectImages/filmo/lenscompanyname.jpg)
 
 \
 \
