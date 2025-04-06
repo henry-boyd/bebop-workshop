@@ -14,10 +14,10 @@ interface Props {
 const { projectName, projectTitle, entrySection, imagePath, featuredImageAltText } = Astro.props;
 
 const image = projectName;
-const featuredImage = "/projectimages/featuredimages/" + image + ".jpg";
+const featuredImage = "/public/projectimages/featuredimages/" + image + ".jpg";
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/ProjectImages/FeaturedImages/*.{jpeg,jpg,png,gif}');
-if (!images[featuredImage]) throw new Error(`"${featuredImage}" does not exist in glob: "src/assets/ProjectImages/FeaturedImages/*.{jpeg,jpg,png,gif}"`);
+const images = import.meta.glob<{ default: ImageMetadata }>('/public/projectimages/featuredimages/*.{jpeg,jpg,png,gif}');
+if (!images[featuredImage]) throw new Error(`"${featuredImage}" does not exist in glob: "/public/projectimages/featuredimages/*.{jpeg,jpg,png,gif}"`);
 
 ---
 
