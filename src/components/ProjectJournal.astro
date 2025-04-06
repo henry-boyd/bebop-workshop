@@ -15,7 +15,7 @@ const { projectName, projectTitle, featuredImageAltText } = Astro.props;
 const collectionName = await getCollection(projectName, ({ data }) => {
   return data.draft == true;
 });
-collectionName.sort((a, b) => b.data.pubDate - a.data.pubDate);
+collectionName.sort((a, b) => a.data.pubDate - b.data.pubDate);
 
 ---
 <div class="project-journal-layout">
