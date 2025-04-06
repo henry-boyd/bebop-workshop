@@ -14,7 +14,7 @@ draft: true
 
 ---
 
-![Vintage Filmo Master Projector Ad](/src/assets/ProjectImages/filmo/FilmoMasterVintageAd.jpg)
+![Vintage Filmo Master Projector Ad](/projectimages/filmo/FilmoMasterVintageAd.jpg)
 <br>
 <br>
 Not surprisingly, I didn't find whole lot about this projector while combing the depths of the internet. But luckily there were still a few bits & pieces of information in some of the more vintage corners of the web. For starters, Ebay listings helped me ID the specific Bell & Howell model I had. From there I located a few resources that were somewhat helpful.

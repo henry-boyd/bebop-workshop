@@ -16,13 +16,13 @@ draft: true
 Spoiler Alert: I may have started a teeny tiny electrical fire. Whoopsy Daisy!
 
 <div style="padding: 1rem 0rem;">
-<img src="/src/assets/ProjectImages/filmo/previouslyonfireprojector.jpg" style="padding: .5rem 0rem;">
+<img src="/projectimages/filmo/previouslyonfireprojector.jpg" style="padding: .5rem 0rem;">
 <p style="font-style: italic; text-align: center;">said previously-on-fire projector</p>
 </div>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr;">
 <div style="padding: 1rem 0rem;">
-<img src="/src/assets/ProjectImages/filmo/lighton.jpg" style="max-height: 500px; padding: .5rem 0rem;">
+<img src="/projectimages/filmo/lighton.jpg" style="max-height: 500px; padding: .5rem 0rem;">
 <p style="font-style: italic; text-align: center;">soon-to-be-on-fire projector</p>
 </div>
 <div style="padding: 1rem;">

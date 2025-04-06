@@ -19,7 +19,7 @@ While I don't know much about putting together vintage film projectors, I do kno
 ![Bell & Howell Projector Lens](/src/assets/ProjectImages/filmo/messywires.jpg)
 <br>
 <div style="display: grid; grid-template-columns: 1fr 1fr;">
-<img src="/src/assets/ProjectImages/filmo/wiringschematic.jpg" style="max-height: 450px; height: auto; padding: 1rem;">
+<img src="/projectimages/filmo/wiringschematic.jpg" style="max-height: 450px; height: auto; padding: 1rem;">
 <div style="max-height: 500px; padding: 1rem;">
 <p>In the interest of not electrocuting myself and not lighting anything on fire and not spend an inordinate amount of time trying to replicate the wiring paths I mapped out all of the electrical connections before proceeding and drew up a quick schematic.</p>
 <br>
@@ -28,21 +28,21 @@ While I don't know much about putting together vintage film projectors, I do kno
 </div>
 
 
-<img src="/src/assets/ProjectImages/filmo/disassembly.jpg" style="width: 100%; height: auto; padding: 1rem 0;">
+<img src="/projectimages/filmo/disassembly.jpg" style="width: 100%; height: auto; padding: 1rem 0;">
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-<img src="/src/assets/ProjectImages/filmo/projectorbulb.jpg" style="max-height: 600px;">
+<img src="/projectimages/filmo/projectorbulb.jpg" style="max-height: 600px;">
 <div style="display: grid; grid-template-columns: 1fr 1fr; max-height: 450px;">
-    <img src="/src/assets/ProjectImages/filmo/switches.jpg" style="max-height: 300px;">
-    <img src="/src/assets/ProjectImages/filmo/runrewind.jpg" style="max-height: 300px;">
-    <img src="/src/assets/ProjectImages/filmo/oilcan.jpg" style="max-height: 300px;">
-    <img src="/src/assets/ProjectImages/filmo/patents.jpg" style="max-height: 300px;">
+    <img src="/projectimages/filmo/switches.jpg" style="max-height: 300px;">
+    <img src="/projectimages/filmo/runrewind.jpg" style="max-height: 300px;">
+    <img src="/projectimages/filmo/oilcan.jpg" style="max-height: 300px;">
+    <img src="/projectimages/filmo/patents.jpg" style="max-height: 300px;">
 </div>
 <br>
 <div style="display: grid; grid-template-columns: 1fr 1fr; max-height: 500px; padding: 1rem;">
     <div>
-        <img src="/src/assets/ProjectImages/filmo/motor.jpg" style="max-height: 300px;">
-        <img src="/src/assets/ProjectImages/filmo/backofmotor.jpg" style="max-height: 300px;">
+        <img src="/projectimages/filmo/motor.jpg" style="max-height: 300px;">
+        <img src="/projectimages/filmo/backofmotor.jpg" style="max-height: 300px;">
     </div>
     <div style="max-height: 500px; padding: 1rem;">
         <p>The only other section that was in slightly-rough shape was the motor. I hadn't fully removed the motor from its casing, but I could see a fair amount of corrosion/degradation in the nooks and crannies, plus one of the electrical wires connecting it to the rest of the projector had already broken from wear. So I'm not totally sure if I'll be able to rebuild the motor, but maybe once I pull apart the rest of it I'll have a better idea of the difficulty.</p>
