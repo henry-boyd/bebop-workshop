@@ -2,87 +2,107 @@
 
 ---
 
-<div class=hamburger-menu>
-    <a href="javascript:void(0);" class="x">
-        <svg fill="#000000" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.775 460.775" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path> </g></svg>
-    </a>
-    <a class="hamburger-menu-nav" href="/about">About</a>
-    <a class="hamburger-menu-nav" href="/about">Projects</a>
-    <a class="hamburger-menu-nav" href="/filmoprojector">Filmo Projector</a>
-    <a class="hamburger-menu-nav" href="/severancecomputer">Severance Computer</a>
-</div>
+<ul class=hamburger-menu> 
+    <li><a href="/about">About</a></li>
+{/* <li class="projects"><a href="#">Projects</a></li>  */}
+    <li><a href="/filmoprojector">Filmo</a></li>
+    <li><a href="/severancecomputer">Lumon</a></li>
+</ul>
 
 <script type="text/Javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector(".hamburger");
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const xIcon = document.querySelector(".x");
 
-    const hamburger = document.querySelector(".hamburger");
-    const hamburgerMenu = document.querySelector(".hamburger-menu");
-    const x = document.querySelector(".x");
-
-
-    hamburger.addEventListener("click", function () {
-        hamburgerMenu.style.animation = "slideIn .5s forwards";
+        hamburger.addEventListener("click", function () {
+            if (hamburgerMenu.style.height){
+                hamburgerMenu.style.height = null;
+            } else {
+                hamburgerMenu.style.height = "60px";
+                hamburger.style.display = 'none';
+                xIcon.style.display = 'block';
+            }
+        });
+    
+        xIcon.addEventListener("click", function () {
+            hamburgerMenu.style.height = null;
+            hamburger.style.display = 'block';
+            xIcon.style.display = 'none';
+        });
     });
-
-
-    x.addEventListener("click", function () {
-        hamburgerMenu.style.animation = "slideOut .5s both";
-    });
-
 </script>
 
 <style>
 
-
-.hamburger {
-        max-height: 24px;
-    }
-
     .hamburger-menu {
-        position: absolute;
-        top: 0;
-        right: -100px;
-        z-index: 2;
-        padding: 30px 0px;
-        width: 100px;
+        position: relative;
+        height: 0px;
+        overflow: hidden;
+        transition: height 0.2s ease-out;
         display: flex;
+        justify-content: center;
         align-items: center;
         gap: 16px;
-        flex-direction: column;
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .hamburger-menu > a, li {
+        max-height: 40px;
+        list-style-type: none;
+    }
+
+    li {
         align-items: center;
-        border: 1px solid black;
-        background-color: white;
-        transition-delay: .5s;
     }
 
-    .hamburger-menu-nav {
-        font-size: 1rem;
-        text-align: center;
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.375rem;
     }
 
-    .x {
+    .submenu {
         position: absolute;
-        top: 5px;
-        left: 5px;
+        top: 50px;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        z-index: 3;
+        display: block;
+        overflow: hidden;
+        background-color: white;
+        margin: 0;
     }
 
-    @keyframes slideIn {
+    .projects:hover .submenu {
+        display: block;
+    }
+
+    .submenu > li:hover {
+        text-decoration: underline;
+    }
+
+    .projects:hover {
+        text-decoration: underline;
+    }
+
+    li:hover {
+        text-decoration: underline;
+    }
+
+    @keyframes slideDown {
         100% {
-            transform: translateX(-100px)
+            transform: translateY(70px)
         }
     }
 
-    @keyframes slideOut {
+    @keyframes slideUp {
         0% {
-            transform: translateX(-100px)
+            transform: translateY(-120px)
         }
         100% {
-            transform: translateX(0px)
-        }
-    }
-
-    @media (min-width: 750px) {
-        .hamburger {
-            display: none;
+            transform: translateY(0px)
         }
     }
 

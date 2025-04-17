@@ -1,10 +1,11 @@
 ---
 import ThemeIcon from './ThemeIcon.astro';
 import TinyLightbulbAlreadyOn from '../components/TinyLightbulbAlreadyOn.astro';
+import HamburgerMenu from '../components/HamburgerMenu.astro';
 ---
-
 <header>
     <a id="top" style="position: absolute;"></a>
+    <HamburgerMenu/>
     <div class="project-header">
     <div class="tiny-lightbulb-with-title">
         <div class="lightbulb-box">
@@ -14,8 +15,22 @@ import TinyLightbulbAlreadyOn from '../components/TinyLightbulbAlreadyOn.astro';
     </div>
 
     <div class="menu-section">
-    <nav class="journal-header-menu"> 
-        <li><a href="/about">About</a></li>
+    <nav class="journal-header-menu">
+        <li class="hamburger">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Hamburger Menu">
+            <path id="Line 109" d="M3 20H21" stroke="black" stroke-width="4" stroke-linecap="round"/>
+            <path id="Line 107" d="M3 12H21" stroke="black" stroke-width="4" stroke-linecap="round"/>
+            <path id="Line 108" d="M3 4H21" stroke="black" stroke-width="4" stroke-linecap="round"/>
+            </g>
+            </svg>
+        </li>
+        <li class="x">
+            <a href="javascript:void(0);" class="x-icon">
+                <svg fill="#000000" height="20" width="20" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0.0002498626708984375 0.014999866485595703 460.77471923828125 460.7449645996094" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"><path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/></g></svg>
+            </a>
+        </li>
+        <li class="about"><a href="/about">About</a></li>
         <li class="projects"><a href="#">Projects</a>
             <ul class="submenu">
                 <li><a href="/filmoprojector">Filmo Projector</a></li>
@@ -64,6 +79,8 @@ import TinyLightbulbAlreadyOn from '../components/TinyLightbulbAlreadyOn.astro';
 
     .project-header { 
         display: flex;
+        position: relative;
+        z-index: 1;
         max-width: 51rem;
         margin-left: auto;
         margin-right: auto;
@@ -111,6 +128,10 @@ import TinyLightbulbAlreadyOn from '../components/TinyLightbulbAlreadyOn.astro';
         align-items: center;
     }
 
+    .hamburger {
+        display: none;
+    }
+
     .submenu {
         position: absolute;
         top: 50px;
@@ -136,16 +157,41 @@ import TinyLightbulbAlreadyOn from '../components/TinyLightbulbAlreadyOn.astro';
         text-decoration: underline;
     }
 
+    .hamburger {
+        display: none;
+        max-height: 24px;
+    }
+
+    .x {
+        display: none;
+    }
+
+    .x-icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .x-icon > svg {
+        display: flex;
+        padding: 2px 0;
+    }
+
 
     @media (max-width: 750px) {
         .project-header {
             padding: 0rem;
-            margin-left: 0;
+            margin-left: 0; 
+        }
+
+        .menu-section {
+            margin-right: 1rem;
         }
 
         .journal-header-menu {
-            padding: .5rem .5rem;
-            flex-direction: column;
+            padding: 2rem .5rem;
+            display: grid;
             max-height: none;
             gap: 10px;
             border: none;
@@ -156,6 +202,14 @@ import TinyLightbulbAlreadyOn from '../components/TinyLightbulbAlreadyOn.astro';
         }
         a {
             line-height: 1.1;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+        .projects, .about {
+            display: none;
         }
     }
 

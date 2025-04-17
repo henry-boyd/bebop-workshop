@@ -42,7 +42,11 @@ const { Content } = await render(entry);
     
     .journal-entry {
         position: relative;
-        padding-top: 125px;
+        padding-top: 100px;
+    }
+
+    .journal-anchor {
+        scroll-margin: -30px;
     }
 
    .title-section {
@@ -66,13 +70,12 @@ const { Content } = await render(entry);
 
     .journal-entry-content {
         display: grid;
-        justify-content: center;
         padding: 0 2rem;
     }
 
     @media(max-width: 1250px) {
-        .journal-entry {
-            padding-top: 275px;
+        .journal-anchor {
+        scroll-margin: 160px;
         }
     }
 </style>

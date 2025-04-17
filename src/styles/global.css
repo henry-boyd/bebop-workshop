@@ -74,7 +74,11 @@ li {
     max-width: 65ch;
 }
 
-html.dark {
+p {
+  margin: 1rem 0;
+}
+
+  html.dark {
     background-color: #000000;
     color: #fff;
   }
@@ -88,12 +92,20 @@ html.dark {
     color: #fff;
   }
 
+  .dark li {
+    color: #fff;
+  }
+
   .dark .lightbulbsvg {
     stroke: white;
   }
 
   .dark .lightbulbsvg > circle {
     fill: white;
+  }
+
+  .dark .bulb {
+    fill-opacity: 100%;
   }
   
   .dark .filmo-svg {
