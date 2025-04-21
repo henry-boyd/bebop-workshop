@@ -1,6 +1,6 @@
 ---
 title: "Oppresive Retro Chique"
-project: "Severance Computer"
+project: "Lumon Computer"
 section: "inception"
 sectionid: "#inception"
 pubDate: 2025-04-01

@@ -13,17 +13,13 @@ tags: []
 draft: true
 ---
 
-While I don't know much about putting together vintage film projectors, I do know enough about tearing s*!t apart to get by. So I unscrewed all the screws, pulled apart the projector body sections, and found myself a nice pile of ratty dirty electrical wires.
-\
-<br>
-![Bell & Howell Projector Lens](/src/assets/ProjectImages/filmo/messywires.jpg)
-<br>
-<div style="display: grid; grid-template-columns: 1fr 1fr;">
-<img src="/projectimages/filmo/wiringschematic.jpg" style="max-height: 450px; height: auto; padding: 1rem;">
-<div style="max-height: 500px; padding: 1rem;">
-<p>In the interest of not electrocuting myself and not lighting anything on fire and not spend an inordinate amount of time trying to replicate the wiring paths I mapped out all of the electrical connections before proceeding and drew up a quick schematic.</p>
-<br>
-<p>Once that was done I disconnected all the wiring and separated out all the different components. I gave it a quick polish and blast of canned air to clear out some dust, otherwise almost everything was in immaculate shape besides the wiring (probably because most of the components were meta).</p>
+<p>While I don't know much about putting together vintage film projectors, I do know enough about tearing s*!t apart to get by. So I unscrewed all the screws, pulled apart the projector body sections, and found myself a nice pile of ratty dirty electrical wires.<p>
+<img src="/projectimages/filmo/messywires.jpg">
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+<img src="/projectimages/filmo/wiringschematic.jpg" style="max-width: 350px;">
+<div style="max-width: 300px; margin-left: auto; margin-right: auto;">
+<p>In the interest of not electrocuting myself, not lighting anything on fire, and not spending an inordinate amount of time trying to replicate the wiring paths I mapped out all of the electrical connections before proceeding and drew up a quick schematic.</p>
+<p>Once that was done I disconnected all the wiring and separated out all the different components. I gave it a quick polish and blast of canned air to clear out some dust, otherwise almost everything was in immaculate shape besides the wiring (probably because most of the components were metal).</p>
 </div>
 </div>
 
@@ -32,21 +28,18 @@ While I don't know much about putting together vintage film projectors, I do kno
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center;">
 <img src="/projectimages/filmo/projectorbulb.jpg" style="max-height: 600px;">
-<div style="display: grid; grid-template-columns: 1fr 1fr; max-height: 450px;">
+<div style="display: grid; grid-template-columns: 1fr 1fr;">
     <img src="/projectimages/filmo/switches.jpg" style="max-height: 300px;">
     <img src="/projectimages/filmo/runrewind.jpg" style="max-height: 300px;">
     <img src="/projectimages/filmo/oilcan.jpg" style="max-height: 300px;">
     <img src="/projectimages/filmo/patents.jpg" style="max-height: 300px;">
 </div>
 <br>
-<div style="display: grid; grid-template-columns: 1fr 1fr; max-height: 500px; padding: 1rem;">
-    <div>
-        <img src="/projectimages/filmo/motor.jpg" style="max-height: 300px;">
-        <img src="/projectimages/filmo/backofmotor.jpg" style="max-height: 300px;">
-    </div>
-    <div style="max-height: 500px; padding: 1rem;">
+<div style="display: flex; flex-wrap: wrap;">
         <p>The only other section that was in slightly-rough shape was the motor. I hadn't fully removed the motor from its casing, but I could see a fair amount of corrosion/degradation in the nooks and crannies, plus one of the electrical wires connecting it to the rest of the projector had already broken from wear. So I'm not totally sure if I'll be able to rebuild the motor, but maybe once I pull apart the rest of it I'll have a better idea of the difficulty.</p>
-        <br>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <img src="/projectimages/filmo/motor.jpg" style="max-width: 350px;">
+            <img src="/projectimages/filmo/backofmotor.jpg" style="max-width: 350px;">
+        </div>
         <p>That part wasn't so bad right? Now all I have to do is replace the wiring, rebuild the projector, and see if I can get it working again or if I just completely killed the whole thing.</p>
-    </div>
 </div>

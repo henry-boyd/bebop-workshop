@@ -1,6 +1,6 @@
 ---
 title: "Lumon Industries"
-project: "Severance Computer"
+project: "Lumon Computer"
 section: "summary"
 sectionid: "#summary"
 pubDate: 2025-03-31

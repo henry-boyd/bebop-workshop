@@ -1,6 +1,6 @@
 ---
 title: "Research"
-project: "Severance Computer"
+project: "Lumon Computer"
 section: "research"
 sectionid: "#research"
 pubDate: 2025-04-02
@@ -13,7 +13,7 @@ tags: []
 draft: true
 --- 
 
-<p>The nice thing about a scifi show like Severance is that there's no shortage of fellow nerds trying to dissect every inch of the series! So thankfully there was a fair amount of information on the computers that I was able to track down on the internet.</p>
+<p>The nice thing about a scifi show like Severance is that there's no shortage of fellow nerds trying to dissect every inch of the series! So thankfully there was a fair amount of information on the computers that I was able to track down on the internet.</p> 
 
 <p> 
 </p>
