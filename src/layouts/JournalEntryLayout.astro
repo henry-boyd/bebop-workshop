@@ -1,0 +1,26 @@
+---
+import '../styles/global.css';
+
+interface Props {
+    projectName: CollectionKey;
+    projectTitle: string;
+    featuredImageAltText: string;
+}
+
+const { projectName, projectTitle, featuredImageAltText } = Astro.props;
+---
+
+<style>
+
+    h4 {
+        margin: 1rem 0;
+    }
+
+    .img-caption {
+        text-align: center;
+        font-size: 1rem;
+        font-style: italic;
+        color: grey;
+    }
+
+</style>
